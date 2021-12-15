@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run a single-line script
-      run: |
-        curl -k --data token="${{ secrets.PUSH_PLUS_TOKEN }}" --data title="Hi，小伙伴们\n 今天的周报交了嘛！" --data "content=Hi，小伙伴们\n 今天的周报交了嘛！"
       env:
         PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
+      run: |
+        curl -k --data token="${{ secrets.PUSH_PLUS_TOKEN }}" --data title="Hi，小伙伴们\n 今天的周报交了嘛！" --data "content=Hi，小伙伴们\n 今天的周报交了嘛！"
+
