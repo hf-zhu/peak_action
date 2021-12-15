@@ -1,0 +1,17 @@
+name: Hello World
+on: 
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+jobs:
+  my_first_job:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a single-line script
+      run: |
+        curl -k --data token="${{ secrets.PUSH_PLUS_TOKEN }}" --data title="Hi，小伙伴们\n 今天的周报交了嘛！" --data "content=Hi，小伙伴们\n 今天的周报交了嘛！"
