@@ -1,10 +1,10 @@
 name: 定时提醒周报任务
 
 on:
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+  # push:
+    # branches: [main, master]
+  # pull_request:
+    # branches: [main, master]
   workflow_dispatch:
   schedule:
     # 可自定义 cron 表达式
