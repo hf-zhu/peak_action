@@ -18,6 +18,6 @@ jobs:
        uses: foxundermoon/wechat-work-action@v1
        with:
          url: ${{ secrets.PUSH_PLUS_TOKEN }}
-         type: markdown
-         content: f'### Hi，小伙伴们\n 今天的周报交了嘛！\n 
+         type: text
+         content: Hi，小伙伴们，今天的周报交了嘛！ 
          at: all
