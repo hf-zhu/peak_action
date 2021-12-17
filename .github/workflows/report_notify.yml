@@ -20,4 +20,4 @@ jobs:
          url: ${{ secrets.PUSH_PLUS_TOKEN }}
          type: text
          content: Hi，小伙伴们，今天的周报交了嘛！ 
-         at: all
+         at: 祝洪峰
