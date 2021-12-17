@@ -19,4 +19,5 @@ jobs:
        with:
          url: ${{ secrets.PUSH_PLUS_TOKEN }}
          type: markdown
-         content: from github action test 
+         content: f'### Hi，小伙伴们\n 今天的周报交了嘛！\n 
+         at: all
