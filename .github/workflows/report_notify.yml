@@ -14,10 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 纯文本类型
-      - name: Sending Wechat Work Message
-        uses: x-actions/wechat-work@master
-        env:
-          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
-          MSGTYPE: markdown
-          CONTENT: |
-          # Wechat Work Noti\n > ^_^
+     - name: ci status
+       uses: foxundermoon/wechat-work-action@v1
+       with:
+         url: ${{ secrets.PUSH_PLUS_TOKEN }}
+         type: markdown
+         content: from github action test 
