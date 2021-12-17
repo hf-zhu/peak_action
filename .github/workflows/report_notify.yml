@@ -1,0 +1,25 @@
+name: 定时提醒周报任务
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+  schedule:
+    # 可自定义 cron 表达式
+    - cron: '30 1,2 * * 4'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 纯文本类型
+      - name: WeChat Work notification by text
+        uses: chf007/action-wechat-work@master
+        env:
+          PUSH_PLUS_TOKEN: ${{secrets.PUSH_PLUS_TOKEN}}
+        with:
+          msgtype: text
+          content: 广州今日天气：29度，大部分多云，降雨概率：60%
+          mentioned_list: '["@all"]'
