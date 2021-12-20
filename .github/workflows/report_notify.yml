@@ -34,5 +34,5 @@ jobs:
         WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
        with:
         msgtype: markdown
-        content: " <font color=\"warning\">### Hi，小伙伴们，</font>\n> <font color=\"warning\">今天的周报交了嘛！</font>"
+        content: "### <font color=\"warning\">Hi，小伙伴们，</font>\n> <font color=\"warning\">今天的周报交了嘛！</font>"
 
