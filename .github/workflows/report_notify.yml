@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [main, master]
   workflow_dispatch:
- schedule:
+  schedule:
     可自定义 cron 表达式
    - cron: '30 1,2 * * *'
 
