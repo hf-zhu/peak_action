@@ -13,7 +13,6 @@ jobs:
   send-msg:
     runs-on: ubuntu-latest
     steps:
-      # 纯文本类型
      - name: ci status
        uses: foxundermoon/wechat-work-action@v1
        with:
