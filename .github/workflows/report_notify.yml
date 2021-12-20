@@ -1,7 +1,7 @@
 name: Send notification on push
 on:
   push:
-    branches: [main, master]
+    branches: [main, master,Dev]
   pull_request:
     branches: [main, master]
   workflow_dispatch:
