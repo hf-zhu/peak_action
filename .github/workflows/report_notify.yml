@@ -5,9 +5,9 @@ on:
   pull_request:
     branches: [main, master]
   workflow_dispatch:
- # schedule:
-    # 可自定义 cron 表达式
-  #  - cron: '30 1,2 * * 4'
+ schedule:
+    可自定义 cron 表达式
+   - cron: '30 1,2 * * *'
 
 jobs:
   send-msg:
@@ -26,7 +26,7 @@ jobs:
          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
        with:
           msgtype: text
-          content: 广州今日天气：29度，大部分多云，降雨概率：60%
+          content: Hi，小伙伴们，今天的周报交了嘛！
           mentioned_list: '["@all"]'
      - name: WeChat Work notification by markdown
        uses: chf007/action-wechat-work@master
@@ -34,4 +34,4 @@ jobs:
         WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
        with:
         msgtype: markdown
-        content: "实时新增用户反馈<font color=\"warning\">132例</font>，请相关同事注意。\n> 类型:<font color=\"comment\">用户反馈</font> \n> 普通用户反馈:<font color=\"comment\">117例</font> \n > VIP用户反馈:<font color=\"comment\">15例</font>"
+        content: "<font color=\"warning\">Hi，小伙伴们，\n>今天的周报交了嘛！</font>"
