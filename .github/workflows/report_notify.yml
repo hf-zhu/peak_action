@@ -13,13 +13,13 @@ jobs:
   send-msg:
     runs-on: ubuntu-latest
     steps:
-     - name: ci status
-       uses: foxundermoon/wechat-work-action@v1
+     - name: WeChat Work notification by markdown
+       uses: chf007/action-wechat-work@master
+       env:
+        WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
        with:
-         url: ${{ secrets.PUSH_PLUS_TOKEN }}
-         type: text
-         content: Hi，小伙伴们，今天的周报交了嘛！ 
-         at: 祝洪峰
+        msgtype: markdown
+        content: "### <font color=\"warning\">Hi，小伙伴们，</font>\n> <font color=\"warning\">今天的周报交了嘛！</font>"
      - name: WeChat Work notification by text
        uses: chf007/action-wechat-work@master
        env:
@@ -28,11 +28,5 @@ jobs:
           msgtype: text
           content: Hi，小伙伴们，今天的周报交了嘛！
           mentioned_list: '["@all"]'
-     - name: WeChat Work notification by markdown
-       uses: chf007/action-wechat-work@master
-       env:
-        WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
-       with:
-        msgtype: markdown
-        content: "### <font color=\"warning\">Hi，小伙伴们，</font>\n> <font color=\"warning\">今天的周报交了嘛！</font>"
+
 
