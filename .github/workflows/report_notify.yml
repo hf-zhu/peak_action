@@ -35,3 +35,4 @@ jobs:
        with:
         msgtype: markdown
         content: "<font color=\"warning\">Hi，小伙伴们，\n>今天的周报交了嘛！</font>"
+
