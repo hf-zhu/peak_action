@@ -1,13 +1,13 @@
 name: Send notification on push
 on:
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+  # push:
+    # branches: [main, master]
+  # pull_request:
+    # branches: [main, master]
   workflow_dispatch:
   schedule:
     #可自定义 cron 表达式
-   - cron: "15 1,2 * * *"
+   - cron: "24 1,2 * * *"
 
 jobs:
   send-msg:
