@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   schedule:
     #可自定义 cron 表达式
-   - cron: '30 1,2 * * *'
+   - cron: "30 1,2 * * *"
 
 jobs:
   send-msg:
